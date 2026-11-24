@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>网页二维码扫描</title>
+  <link rel="stylesheet" href="popup.css">
+  <script type="module" src="popup.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <img class="brand" src="icons/48.png" width="36" height="36" alt="">
+    <h1>网页二维码扫描</h1>
+    <button id="rescan" class="rescan" type="button" disabled>重新扫描</button>
+  </header>
+  <main>
+    <section id="first-scan" hidden aria-labelledby="first-scan-title">
+      <div class="status">
+        <strong id="first-scan-title">扫描当前网页</strong>
+        <span>扫描时会读取当前标签页的地址、可见画面及可读取的网页图片和 Canvas。图像和结果仅在本机临时处理。</span>
+      </div>
+      <button id="start-scan" class="primary" type="button">同意并扫描</button>
+    </section>
+    <div id="status" class="status" role="status" aria-live="polite" hidden>
+      <strong id="status-title">正在扫描当前网页…</strong>
+      <span id="status-detail">正在查找二维码</span>
+    </div>
+    <fieldset id="results" hidden>
+      <legend class="sr-only">选择二维码</legend>
+      <div id="choices" class="choices"></div>
+    </fieldset>
+    <section id="destination" class="destination" aria-labelledby="destination-title" hidden>
+      <h2 id="destination-title">目标网址</h2>
+      <p id="destination-value" dir="ltr"></p>
+    </section>
+    <p id="feedback" class="feedback" role="status" hidden></p>
+  </main>
+  <footer id="actions" hidden>
+    <button id="copy" type="button" disabled>复制内容</button>
+    <button id="open" class="primary" type="button" disabled>在新标签页打开</button>
+  </footer>
+</body>
+</html>

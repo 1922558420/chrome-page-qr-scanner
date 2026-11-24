@@ -1,0 +1,6 @@
+zxing-wasm 3.1.7 (MIT)
+https://github.com/Sec-ant/zxing-wasm
+
+The packaged reader was built with ZXing-C++ (Apache-2.0) at commit
+f19f7c6e0509fe0eeb822bf35c41b0f637dec290.
+https://github.com/zxing-cpp/zxing-cpp/tree/f19f7c6e0509fe0eeb822bf35c41b0f637dec290
